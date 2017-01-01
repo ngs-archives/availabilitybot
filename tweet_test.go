@@ -14,8 +14,8 @@ func TestTweetChanges(t *testing.T) {
 		return nil
 	})
 	errors := TweetChanges([]CompareResult{
-		CompareResult{Store{Name: "心斎橋", Product: "AirPods"}, Added},
-		CompareResult{Store{Name: "名古屋栄", Product: "AirPods"}, Deleted},
+		{Store{Name: "心斎橋", Product: "AirPods"}, Added},
+		{Store{Name: "名古屋栄", Product: "AirPods"}, Deleted},
 	})
 	Test{[]error{}, errors}.DeepEqual(t)
 	Test{[]string{
@@ -29,13 +29,13 @@ func TestTweetChangesError(t *testing.T) {
 		return fmt.Errorf("omg: %v", status)
 	})
 	res := TweetChanges([]CompareResult{
-		CompareResult{Store{Name: "心斎橋", Product: "AirPods"}, Added},
-		CompareResult{Store{Name: "名古屋栄", Product: "AirPods"}, Deleted},
+		{Store{Name: "心斎橋", Product: "AirPods"}, Added},
+		{Store{Name: "名古屋栄", Product: "AirPods"}, Deleted},
 	})
 	for _, test := range []Test{
-		Test{2, len(res)},
-		Test{"omg: 心斎橋店に AirPods の在庫が追加されました", res[0].Error()},
-		Test{"omg: 名古屋栄店に AirPods の在庫が無くなりました", res[1].Error()},
+		{2, len(res)},
+		{"omg: 心斎橋店に AirPods の在庫が追加されました", res[0].Error()},
+		{"omg: 名古屋栄店に AirPods の在庫が無くなりました", res[1].Error()},
 	} {
 		test.Compare(t)
 	}

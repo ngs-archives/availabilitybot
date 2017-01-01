@@ -33,8 +33,8 @@ func TestFetchAvailabilityAvailable(t *testing.T) {
 		t.Errorf("Expected nil but got '%v'", err.Error())
 	}
 	Test{[]Store{
-		Store{Name: "銀座", Product: "AirPods"},
-		Store{Name: "名古屋栄", Product: "AirPods"},
+		{Name: "銀座", Product: "AirPods"},
+		{Name: "名古屋栄", Product: "AirPods"},
 	}, storeNames}.DeepEqual(t)
 }
 
