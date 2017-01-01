@@ -3,7 +3,7 @@ availabilitybot
 
 [![](https://img.shields.io/docker/automated/atsnngs/availabilitybot.svg)](https://hub.docker.com/r/atsnngs/availabilitybot/)
 
-Tweets Parts Avaliability in Apple Stores in Japan.
+Tweets Parts Availability in Apple Stores in Japan.
 
 Environment variables
 ---------------------
