@@ -28,7 +28,7 @@
             "ctoOptions": "",
             "storePickupLinkText": "受け取れる日を確認",
             "storePickupProductTitle": "AirPods",
-            "pickupDisplay": "ships-to-store"
+            "pickupDisplay": "available"
           }
         },
         "phoneNumber": "03-5159-8200",
@@ -187,7 +187,7 @@
             "ctoOptions": "",
             "storePickupLinkText": "受け取れる日を確認",
             "storePickupProductTitle": "AirPods",
-            "pickupDisplay": "ships-to-store"
+            "pickupDisplay": "available"
           }
         },
         "phoneNumber": "052-2382400",

@@ -5,7 +5,6 @@ import (
 	"io/ioutil"
 	"net/http"
 	"net/url"
-	"strings"
 )
 
 // Store represents store
@@ -34,9 +33,9 @@ func FetchAvailability(partNumber string) ([]Store, error) {
 	for _, s := range storeResults {
 		store := s.(map[string]interface{})
 		part := store["partsAvailability"].(map[string]interface{})[partNumber].(map[string]interface{})
-		quote := part["pickupSearchQuote"].(string)
+		pickupDisplay := part["pickupDisplay"].(string)
 		partName := part["storePickupProductTitle"].(string)
-		if strings.Contains(quote, "本日") {
+		if pickupDisplay == "available" {
 			stores = append(stores, Store{
 				Name:    store["storeName"].(string),
 				Product: partName,
