@@ -35,7 +35,7 @@ Crontab
 -------
 
 ```sh
-* * * * * docker run --rm --env-file /home/ngs/availabilitybot/.env -v /home/ngs/availabilitybot:/home/bot -it atsnngs/availabilitybot MMEF2J/A
+* * * * * sudo docker run --env-file /home/ngs/availabilitybot/.env --rm -v /home/ngs/availabilitybot:/home/bot atsnngs/availabilitybot MMEF2J/A
 ```
 
 Build
