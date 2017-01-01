@@ -2,6 +2,9 @@ availabilitybot
 ===============
 
 [![](https://img.shields.io/docker/automated/atsnngs/availabilitybot.svg)](https://hub.docker.com/r/atsnngs/availabilitybot/)
+[![Build Status](https://travis-ci.org/ngs/availabilitybot.svg?branch=master)](https://travis-ci.org/ngs/availabilitybot)
+[![Coverage Status](https://coveralls.io/repos/github/ngs/availabilitybot/badge.svg?branch=master)](https://coveralls.io/github/ngs/availabilitybot?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ngs/availabilitybot)](https://goreportcard.com/report/github.com/ngs/availabilitybot)
 
 Tweets Parts Availability in Apple Stores in Japan.
 
