@@ -7,6 +7,15 @@ import (
 	"github.com/dghubble/oauth1"
 )
 
+var updateStatusFn = func(c *twitter.Client, status string) error {
+	_, _, err := c.Statuses.Update(status, nil)
+	return err
+}
+
+func setUpdateStatusFn(fn func(c *twitter.Client, status string) error) {
+	updateStatusFn = fn
+}
+
 // TwitterClient creates new Twitter client
 func TwitterClient() *twitter.Client {
 	consumerKey := os.Getenv("TWITTER_CONSUMER_KEY")
@@ -29,12 +38,12 @@ func TweetChanges(results []CompareResult) []error {
 	for _, r := range results {
 		switch r.Change {
 		case Added:
-			if _, _, err := c.Statuses.Update(r.StoreName+"店に Airpods の在庫が追加されました", nil); err != nil {
+			if err := updateStatusFn(c, r.Store.Name+"店に "+r.Store.Product+" の在庫が追加されました"); err != nil {
 				errors = append(errors, err)
 			}
 			break
 		case Deleted:
-			if _, _, err := c.Statuses.Update(r.StoreName+"店に Airpods の在庫が無くなりました", nil); err != nil {
+			if err := updateStatusFn(c, r.Store.Name+"店に "+r.Store.Product+" の在庫が無くなりました"); err != nil {
 				errors = append(errors, err)
 			}
 			break

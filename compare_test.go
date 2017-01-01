@@ -13,11 +13,14 @@ func TestCompareAvailabilityUnavailable(t *testing.T) {
 		Reply(200).
 		File("_fixtures/unavailable.json")
 
-	storeNames := CompareAvailability([]string{"銀座", "心斎橋"}, []string{})
+	stores := CompareAvailability([]Store{
+		Store{Name: "銀座", Product: "AirPods"},
+		Store{Name: "心斎橋", Product: "AirPods"},
+	}, []Store{})
 	Test{[]CompareResult{
-		CompareResult{"銀座", Deleted},
-		CompareResult{"心斎橋", Deleted},
-	}, storeNames}.DeepEqual(t)
+		CompareResult{Store{Name: "銀座", Product: "AirPods"}, Deleted},
+		CompareResult{Store{Name: "心斎橋", Product: "AirPods"}, Deleted},
+	}, stores}.DeepEqual(t)
 }
 
 func TestCompareAvailabilityAvailable(t *testing.T) {
@@ -27,9 +30,15 @@ func TestCompareAvailabilityAvailable(t *testing.T) {
 		Reply(200).
 		File("_fixtures/available.json")
 
-	storeNames := CompareAvailability([]string{"銀座", "心斎橋"}, []string{"銀座", "名古屋栄"})
+	stores := CompareAvailability([]Store{
+		Store{Name: "銀座", Product: "AirPods"},
+		Store{Name: "心斎橋", Product: "AirPods"},
+	}, []Store{
+		Store{Name: "銀座", Product: "AirPods"},
+		Store{Name: "名古屋栄", Product: "AirPods"},
+	})
 	Test{[]CompareResult{
-		CompareResult{"名古屋栄", Added},
-		CompareResult{"心斎橋", Deleted},
-	}, storeNames}.DeepEqual(t)
+		CompareResult{Store{Name: "名古屋栄", Product: "AirPods"}, Added},
+		CompareResult{Store{Name: "心斎橋", Product: "AirPods"}, Deleted},
+	}, stores}.DeepEqual(t)
 }

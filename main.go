@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"flag"
 	"io/ioutil"
 	"log"
@@ -10,20 +11,20 @@ import (
 	"github.com/mitchellh/go-homedir"
 )
 
-func main() {
+func run() error {
 	flag.Parse()
-	if len(flag.Args()) == 0 {
+	if flag.NArg() == 0 {
 		flag.Usage()
-		return
+		return nil
 	}
-	partNumber := flag.Args()[0]
+	partNumber := flag.Arg(0)
 	rc, _ := homedir.Expand("~/.avaiabilitybotrc")
-	var currentStoreNames []string
+	var currentStoreNames []Store
 	rcContent, _ := ioutil.ReadFile(rc)
 	json.Unmarshal(rcContent, &currentStoreNames)
 	newStoreNames, err := FetchAvailability(partNumber)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	results := CompareAvailability(currentStoreNames, newStoreNames)
 	errs := TweetChanges(results)
@@ -31,11 +32,14 @@ func main() {
 		log.Println(err.Error())
 	}
 	if len(errs) > 0 {
-		log.Fatal("Tweet Error")
+		return errors.New("Tweet Error")
 	}
-	data, err := json.Marshal(&newStoreNames)
-	if err != nil {
+	data, _ := json.Marshal(&newStoreNames)
+	return ioutil.WriteFile(rc, data, os.ModePerm)
+}
+
+func main() {
+	if err := run(); err != nil {
 		log.Fatal(err)
 	}
-	ioutil.WriteFile(rc, data, os.ModePerm)
 }

@@ -1,45 +1,41 @@
 package main
 
 import (
-	"errors"
+	"fmt"
 	"testing"
 
-	gock "gopkg.in/h2non/gock.v1"
+	"github.com/dghubble/go-twitter/twitter"
 )
 
 func TestTweetChanges(t *testing.T) {
-	gock.New("https://api.twitter.com").
-		Post("/1.1/statuses/update.json").
-		Reply(200).
-		BodyString("{}")
-	gock.New("https://api.twitter.com").
-		Post("/1.1/statuses/update.json").
-		Reply(200).
-		BodyString("{}")
-
+	statuses := []string{}
+	setUpdateStatusFn(func(c *twitter.Client, status string) error {
+		statuses = append(statuses, status)
+		return nil
+	})
 	errors := TweetChanges([]CompareResult{
-		CompareResult{"心斎橋", Added},
-		CompareResult{"名古屋栄", Deleted},
+		CompareResult{Store{Name: "心斎橋", Product: "AirPods"}, Added},
+		CompareResult{Store{Name: "名古屋栄", Product: "AirPods"}, Deleted},
 	})
 	Test{[]error{}, errors}.DeepEqual(t)
+	Test{[]string{
+		"心斎橋店に AirPods の在庫が追加されました",
+		"名古屋栄店に AirPods の在庫が無くなりました",
+	}, statuses}.DeepEqual(t)
 }
 
 func TestTweetChangesError(t *testing.T) {
-	gock.New("https://api.twitter.com").
-		Post("/1.1/statuses/update.json").
-		ReplyError(errors.New("omg 1"))
-	gock.New("https://api.twitter.com").
-		Post("/1.1/statuses/update.json").
-		ReplyError(errors.New("omg 2"))
-
+	setUpdateStatusFn(func(c *twitter.Client, status string) error {
+		return fmt.Errorf("omg: %v", status)
+	})
 	res := TweetChanges([]CompareResult{
-		CompareResult{"心斎橋", Added},
-		CompareResult{"名古屋栄", Deleted},
+		CompareResult{Store{Name: "心斎橋", Product: "AirPods"}, Added},
+		CompareResult{Store{Name: "名古屋栄", Product: "AirPods"}, Deleted},
 	})
 	for _, test := range []Test{
 		Test{2, len(res)},
-		Test{"Post https://api.twitter.com/1.1/statuses/update.json: omg 1", res[0].Error()},
-		Test{"Post https://api.twitter.com/1.1/statuses/update.json: omg 2", res[1].Error()},
+		Test{"omg: 心斎橋店に AirPods の在庫が追加されました", res[0].Error()},
+		Test{"omg: 名古屋栄店に AirPods の在庫が無くなりました", res[1].Error()},
 	} {
 		test.Compare(t)
 	}

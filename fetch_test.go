@@ -18,7 +18,7 @@ func TestFetchAvailabilityUnavailable(t *testing.T) {
 	if err != nil {
 		t.Errorf("Expected nil but got '%v'", err.Error())
 	}
-	Test{[]string{}, storeNames}.DeepEqual(t)
+	Test{[]Store{}, storeNames}.DeepEqual(t)
 }
 
 func TestFetchAvailabilityAvailable(t *testing.T) {
@@ -32,7 +32,10 @@ func TestFetchAvailabilityAvailable(t *testing.T) {
 	if err != nil {
 		t.Errorf("Expected nil but got '%v'", err.Error())
 	}
-	Test{[]string{"銀座", "名古屋栄"}, storeNames}.DeepEqual(t)
+	Test{[]Store{
+		Store{Name: "銀座", Product: "AirPods"},
+		Store{Name: "名古屋栄", Product: "AirPods"},
+	}, storeNames}.DeepEqual(t)
 }
 
 func TestFetchAvailabilityHTTPError(t *testing.T) {
@@ -46,7 +49,7 @@ func TestFetchAvailabilityHTTPError(t *testing.T) {
 		"Get http://www.apple.com/jp/shop/retail/pickup-message?location=100-0001&parts.0=MMEF2J%2FA: omg",
 		err.Error(),
 	}.Compare(t)
-	Test{[]string{}, storeNames}.DeepEqual(t)
+	Test{[]Store{}, storeNames}.DeepEqual(t)
 }
 
 func TestFetchAvailabilityInvalidJSON(t *testing.T) {
@@ -61,5 +64,5 @@ func TestFetchAvailabilityInvalidJSON(t *testing.T) {
 		"invalid character 'i' looking for beginning of object key string",
 		err.Error(),
 	}.Compare(t)
-	Test{[]string{}, storeNames}.DeepEqual(t)
+	Test{[]Store{}, storeNames}.DeepEqual(t)
 }

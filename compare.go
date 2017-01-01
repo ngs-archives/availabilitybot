@@ -12,13 +12,13 @@ const (
 
 // CompareResult represents compare result
 type CompareResult struct {
-	StoreName string
-	Change    ChangeType
+	Store  Store
+	Change ChangeType
 }
 
-func contains(s []string, e string) bool {
+func contains(s []Store, e Store) bool {
 	for _, a := range s {
-		if a == e {
+		if a.Name == e.Name {
 			return true
 		}
 	}
@@ -26,7 +26,7 @@ func contains(s []string, e string) bool {
 }
 
 // CompareAvailability compares availability
-func CompareAvailability(currentStoreNames []string, newStoreNames []string) []CompareResult {
+func CompareAvailability(currentStoreNames []Store, newStoreNames []Store) []CompareResult {
 	res := []CompareResult{}
 	for _, n := range newStoreNames {
 		if !contains(currentStoreNames, n) {
