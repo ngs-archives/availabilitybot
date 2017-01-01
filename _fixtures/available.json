@@ -1,0 +1,386 @@
+{
+  "head": {
+    "status": "200",
+    "data": {}
+  },
+  "body": {
+    "stores": [
+      {
+        "storeEmail": "ginza@apple.com",
+        "storeName": "銀座",
+        "reservationUrl": "http://www.apple.com/jp/retail/ginza",
+        "makeReservationUrl": "http://www.apple.com/jp/retail/ginza",
+        "state": "東京都",
+        "storeImageUrl": "http://rtlimages.apple.com/cmc/dieter/store/4_3/R079.png",
+        "country": "JP",
+        "city": "中央区",
+        "storeNumber": "R079",
+        "partsAvailability": {
+          "MMEF2J/A": {
+            "storePickEligible": true,
+            "storeSearchEnabled": true,
+            "storeSelectionEnabled": true,
+            "storePickupQuote": "日 2017/02/19 Apple Store, 銀座",
+            "pickupSearchQuote": "受け取れる日：<br/>本日",
+            "storePickupLabel": "Apple Storeでの受取：",
+            "partNumber": "MMEF2J/A",
+            "purchaseOption": "",
+            "ctoOptions": "",
+            "storePickupLinkText": "受け取れる日を確認",
+            "storePickupProductTitle": "AirPods",
+            "pickupDisplay": "ships-to-store"
+          }
+        },
+        "phoneNumber": "03-5159-8200",
+        "address": {
+          "address": "Apple Store, 銀座",
+          "address3": "サヱグサビル本館",
+          "address2": "銀座3-5-12",
+          "postalCode": "104-0061"
+        },
+        "hoursUrl": "http://www.apple.com/jp/retail/ginza",
+        "storeHours": {
+          "storeHoursText": "営業時間",
+          "bopisPickupDays": "日数",
+          "bopisPickupHours": "時間",
+          "hours": [
+            {
+              "storeTimings": "10:00〜21:00",
+              "storeDays": "月〜日:"
+            }
+          ]
+        },
+        "storelatitude": 35.67232,
+        "storelongitude": 139.76572,
+        "storedistance": 1.66,
+        "storeDistanceWithUnit": "1.66 km",
+        "storeDistanceVoText": "104-0061からの距離：1.66 km",
+        "storelistnumber": 1,
+        "storeListNumber": 1
+      },
+      {
+        "storeEmail": "omotesando@apple.com",
+        "storeName": "表参道",
+        "reservationUrl": "http://www.apple.com/jp/retail/omotesando",
+        "makeReservationUrl": "http://www.apple.com/jp/retail/omotesando",
+        "state": "東京都",
+        "storeImageUrl": "http://rtlimages.apple.com/cmc/dieter/store/4_3/R224.png",
+        "country": "JP",
+        "city": "渋谷区",
+        "storeNumber": "R224",
+        "partsAvailability": {
+          "MMEF2J/A": {
+            "storePickEligible": true,
+            "storeSearchEnabled": true,
+            "storeSelectionEnabled": true,
+            "storePickupQuote": "日 2017/02/19 Apple Store, 表参道",
+            "pickupSearchQuote": "受け取れる日：<br/>日 2017/02/19",
+            "storePickupLabel": "Apple Storeでの受取：",
+            "partNumber": "MMEF2J/A",
+            "purchaseOption": "",
+            "ctoOptions": "",
+            "storePickupLinkText": "受け取れる日を確認",
+            "storePickupProductTitle": "AirPods",
+            "pickupDisplay": "ships-to-store"
+          }
+        },
+        "phoneNumber": "03-6757-4400",
+        "address": {
+          "address": "Apple Store, 表参道",
+          "address3": null,
+          "address2": "神宮前4-2-13",
+          "postalCode": "150-0001"
+        },
+        "hoursUrl": "http://www.apple.com/jp/retail/omotesando",
+        "storeHours": {
+          "storeHoursText": "営業時間",
+          "bopisPickupDays": "日数",
+          "bopisPickupHours": "時間",
+          "hours": [
+            {
+              "storeTimings": "10:00〜21:00",
+              "storeDays": "月〜日:"
+            }
+          ]
+        },
+        "storelatitude": 35.666129,
+        "storelongitude": 139.710932,
+        "storedistance": 4.36,
+        "storeDistanceWithUnit": "4.36 km",
+        "storeDistanceVoText": "150-0001からの距離：4.36 km",
+        "storelistnumber": 2,
+        "storeListNumber": 2
+      },
+      {
+        "storeEmail": "Shibuya@apple.com",
+        "storeName": "渋谷",
+        "reservationUrl": "http://www.apple.com/jp/retail/shibuya",
+        "makeReservationUrl": "http://www.apple.com/jp/retail/shibuya",
+        "state": "東京都",
+        "storeImageUrl": "http://rtlimages.apple.com/cmc/dieter/store/4_3/R119.png",
+        "country": "JP",
+        "city": "渋谷区",
+        "storeNumber": "R119",
+        "partsAvailability": {
+          "MMEF2J/A": {
+            "storePickEligible": true,
+            "storeSearchEnabled": true,
+            "storeSelectionEnabled": true,
+            "storePickupQuote": "日 2017/02/19 Apple Store, 渋谷",
+            "pickupSearchQuote": "受け取れる日：<br/>日 2017/02/19",
+            "storePickupLabel": "Apple Storeでの受取：",
+            "partNumber": "MMEF2J/A",
+            "purchaseOption": "",
+            "ctoOptions": "",
+            "storePickupLinkText": "受け取れる日を確認",
+            "storePickupProductTitle": "AirPods",
+            "pickupDisplay": "ships-to-store"
+          }
+        },
+        "phoneNumber": "03-6415-3300",
+        "address": {
+          "address": "Apple Store, 渋谷",
+          "address3": "公園通りビル",
+          "address2": "神南1-20-9 ",
+          "postalCode": "150-0041"
+        },
+        "hoursUrl": "http://www.apple.com/jp/retail/shibuya",
+        "storeHours": {
+          "storeHoursText": "営業時間",
+          "bopisPickupDays": "日数",
+          "bopisPickupHours": "時間",
+          "hours": [
+            {
+              "storeTimings": "10:00〜21:00",
+              "storeDays": "月〜日:"
+            }
+          ]
+        },
+        "storelatitude": 35.66196,
+        "storelongitude": 139.69978,
+        "storedistance": 5.47,
+        "storeDistanceWithUnit": "5.47 km",
+        "storeDistanceVoText": "150-0041からの距離：5.47 km",
+        "storelistnumber": 3,
+        "storeListNumber": 3
+      },
+      {
+        "storeEmail": "nagoyasakae@apple.com",
+        "storeName": "名古屋栄",
+        "reservationUrl": "http://www.apple.com/jp/retail/nagoyasakae",
+        "makeReservationUrl": "http://www.apple.com/jp/retail/nagoyasakae",
+        "state": "愛知県",
+        "storeImageUrl": "http://rtlimages.apple.com/cmc/dieter/store/4_3/R005.png",
+        "country": "JP",
+        "city": "名古屋市",
+        "storeNumber": "R005",
+        "partsAvailability": {
+          "MMEF2J/A": {
+            "storePickEligible": true,
+            "storeSearchEnabled": true,
+            "storeSelectionEnabled": true,
+            "storePickupQuote": "日 2017/02/19 Apple Store, 名古屋栄",
+            "pickupSearchQuote": "受け取れる日：<br/>本日",
+            "storePickupLabel": "Apple Storeでの受取：",
+            "partNumber": "MMEF2J/A",
+            "purchaseOption": "",
+            "ctoOptions": "",
+            "storePickupLinkText": "受け取れる日を確認",
+            "storePickupProductTitle": "AirPods",
+            "pickupDisplay": "ships-to-store"
+          }
+        },
+        "phoneNumber": "052-2382400",
+        "address": {
+          "address": "Apple Store, 名古屋栄",
+          "address3": "エフエックスビル",
+          "address2": "中区栄3-17-15",
+          "postalCode": "460-0008"
+        },
+        "hoursUrl": "http://www.apple.com/jp/retail/nagoyasakae",
+        "storeHours": {
+          "storeHoursText": "営業時間",
+          "bopisPickupDays": "日数",
+          "bopisPickupHours": "時間",
+          "hours": [
+            {
+              "storeTimings": "10:00〜21:00",
+              "storeDays": "月〜日:"
+            }
+          ]
+        },
+        "storelatitude": 35.16555,
+        "storelongitude": 136.90716,
+        "storedistance": 264.3,
+        "storeDistanceWithUnit": "264.3 km",
+        "storeDistanceVoText": "460-0008からの距離：264.3 km",
+        "storelistnumber": 4,
+        "storeListNumber": 4
+      },
+      {
+        "storeEmail": "sendaiichibancho@apple.com",
+        "storeName": "仙台一番町",
+        "reservationUrl": "http://www.apple.com/jp/retail/sendaiichibancho",
+        "makeReservationUrl": "http://www.apple.com/jp/retail/sendaiichibancho",
+        "state": "宮城県",
+        "storeImageUrl": "http://rtlimages.apple.com/cmc/dieter/store/4_3/R150.png",
+        "country": "JP",
+        "city": "仙台市",
+        "storeNumber": "R150",
+        "partsAvailability": {
+          "MMEF2J/A": {
+            "storePickEligible": true,
+            "storeSearchEnabled": true,
+            "storeSelectionEnabled": true,
+            "storePickupQuote": "日 2017/02/19 Apple Store, 仙台一番町",
+            "pickupSearchQuote": "受け取れる日：<br/>日 2017/02/19",
+            "storePickupLabel": "Apple Storeでの受取：",
+            "partNumber": "MMEF2J/A",
+            "purchaseOption": "",
+            "ctoOptions": "",
+            "storePickupLinkText": "受け取れる日を確認",
+            "storePickupProductTitle": "AirPods",
+            "pickupDisplay": "ships-to-store"
+          }
+        },
+        "phoneNumber": "022-7223001",
+        "address": {
+          "address": "Apple Store, 仙台一番町",
+          "address3": null,
+          "address2": "青葉区一番町3-10-24",
+          "postalCode": "980-0811"
+        },
+        "hoursUrl": "http://www.apple.com/jp/retail/sendaiichibancho",
+        "storeHours": {
+          "storeHoursText": "営業時間",
+          "bopisPickupDays": "日数",
+          "bopisPickupHours": "時間",
+          "hours": [
+            {
+              "storeTimings": "10:00〜20:00",
+              "storeDays": "月〜日:"
+            }
+          ]
+        },
+        "storelatitude": 38.26166,
+        "storelongitude": 140.87151,
+        "storedistance": 303.34,
+        "storeDistanceWithUnit": "303.34 km",
+        "storeDistanceVoText": "980-0811からの距離：303.34 km",
+        "storelistnumber": 5,
+        "storeListNumber": 5
+      },
+      {
+        "storeEmail": "shinsaibashi@apple.com",
+        "storeName": "心斎橋",
+        "reservationUrl": "http://www.apple.com/jp/retail/shinsaibashi",
+        "makeReservationUrl": "http://www.apple.com/jp/retail/shinsaibashi",
+        "state": "大阪府",
+        "storeImageUrl": "http://rtlimages.apple.com/cmc/dieter/store/4_3/R091.png",
+        "country": "JP",
+        "city": "大阪市",
+        "storeNumber": "R091",
+        "partsAvailability": {
+          "MMEF2J/A": {
+            "storePickEligible": true,
+            "storeSearchEnabled": true,
+            "storeSelectionEnabled": true,
+            "storePickupQuote": "日 2017/02/19 Apple Store, 心斎橋",
+            "pickupSearchQuote": "受け取れる日：<br/>日 2017/02/19",
+            "storePickupLabel": "Apple Storeでの受取：",
+            "partNumber": "MMEF2J/A",
+            "purchaseOption": "",
+            "ctoOptions": "",
+            "storePickupLinkText": "受け取れる日を確認",
+            "storePickupProductTitle": "AirPods",
+            "pickupDisplay": "ships-to-store"
+          }
+        },
+        "phoneNumber": "06-4963-4500",
+        "address": {
+          "address": "Apple Store, 心斎橋",
+          "address3": "アーバンBLD心斎橋",
+          "address2": "中央区西心斎橋1-5-5",
+          "postalCode": "542-0086"
+        },
+        "hoursUrl": "http://www.apple.com/jp/retail/shinsaibashi",
+        "storeHours": {
+          "storeHoursText": "営業時間",
+          "bopisPickupDays": "日数",
+          "bopisPickupHours": "時間",
+          "hours": [
+            {
+              "storeTimings": "10:00〜21:00",
+              "storeDays": "月〜日:"
+            }
+          ]
+        },
+        "storelatitude": 34.672,
+        "storelongitude": 135.50007,
+        "storedistance": 402.62,
+        "storeDistanceWithUnit": "402.62 km",
+        "storeDistanceVoText": "542-0086からの距離：402.62 km",
+        "storelistnumber": 6,
+        "storeListNumber": 6
+      },
+      {
+        "storeEmail": "fukuokatenjin@apple.com",
+        "storeName": "福岡天神",
+        "reservationUrl": "http://www.apple.com/jp/retail/fukuokatenjin",
+        "makeReservationUrl": "http://www.apple.com/jp/retail/fukuokatenjin",
+        "state": "福岡県",
+        "storeImageUrl": "http://rtlimages.apple.com/cmc/dieter/store/4_3/R048.png",
+        "country": "JP",
+        "city": "福岡市",
+        "storeNumber": "R048",
+        "partsAvailability": {
+          "MMEF2J/A": {
+            "storePickEligible": true,
+            "storeSearchEnabled": true,
+            "storeSelectionEnabled": true,
+            "storePickupQuote": "日 2017/02/19 Apple Store, 福岡天神",
+            "pickupSearchQuote": "受け取れる日：<br/>日 2017/02/19",
+            "storePickupLabel": "Apple Storeでの受取：",
+            "partNumber": "MMEF2J/A",
+            "purchaseOption": "",
+            "ctoOptions": "",
+            "storePickupLinkText": "受け取れる日を確認",
+            "storePickupProductTitle": "AirPods",
+            "pickupDisplay": "ships-to-store"
+          }
+        },
+        "phoneNumber": "092-7366800",
+        "address": {
+          "address": "Apple Store, 福岡天神",
+          "address3": "天神ルーチェ",
+          "address2": "中央区天神2-3-24",
+          "postalCode": "810-0001"
+        },
+        "hoursUrl": "http://www.apple.com/jp/retail/fukuokatenjin",
+        "storeHours": {
+          "storeHoursText": "営業時間",
+          "bopisPickupDays": "日数",
+          "bopisPickupHours": "時間",
+          "hours": [
+            {
+              "storeTimings": "10:00〜21:00",
+              "storeDays": "月〜日:"
+            }
+          ]
+        },
+        "storelatitude": 33.58667,
+        "storelongitude": 130.39752,
+        "storedistance": 886.8,
+        "storeDistanceWithUnit": "886.8 km",
+        "storeDistanceVoText": "810-0001からの距離：886.8 km",
+        "storelistnumber": 7,
+        "storeListNumber": 7
+      }
+    ],
+    "overlayInitiatedFromWarmStart": false,
+    "viewMoreHoursLinkText": "ほかの営業時間も表示する",
+    "storesCount": "100-0001の近くに7件のストアが見つかりました",
+    "little": false,
+    "location": "100-0001"
+  }
+}
