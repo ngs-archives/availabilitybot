@@ -48,7 +48,7 @@ func TestMain(t *testing.T) {
 		Post("/1.1/statuses/update.json").
 		Reply(200).
 		BodyString("{}")
-	os.Args = []string{"MMEF2J/A"}
+	os.Args = []string{"test", "MMEF2J/A"}
 	main()
 	b, _ := ioutil.ReadFile(rc)
 	Test{`["銀座","名古屋栄"]`, string(b)}.Compare(t)

@@ -12,6 +12,10 @@ import (
 
 func main() {
 	flag.Parse()
+	if len(flag.Args()) == 0 {
+		flag.Usage()
+		return
+	}
 	partNumber := flag.Args()[0]
 	rc, _ := homedir.Expand("~/.avaiabilitybotrc")
 	var currentStoreNames []string
